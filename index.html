@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>CSS Animations & JS LocalStorage</title>
+  <link rel="stylesheet" href="styles.css" />
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      padding: 40px;
+      transition: background-color 0.5s ease;
+    }
+    button, input[type="color"] {
+      padding: 10px 20px;
+      font-size: 16px;
+      margin: 10px;
+      cursor: pointer;
+    }
+    #animatedBox {
+      width: 150px;
+      height: 150px;
+      background-color: teal;
+      margin: 30px auto;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Animation & Preference </h1>
+
+  <!-- Color Picker -->
+  <label for="bgColor">Choose Background Color:</label><br/>
+  <input type="color" id="bgColor" />
+  <button onclick="savePreference()">Save Background</button>
+
+  <!-- Animated Button -->
+  <button id="animateBtn" onclick="triggerBounce()">Click Me to Bounce!</button>
+
+  <!-- Zoom-in Box -->
+  <div id="animatedBox" class="zoom-element">Zoom In</div>
+
+  <script src="script.js"></script>
+</body>
+</html>
+
